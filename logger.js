@@ -136,9 +136,9 @@ define(
 //      var file = stack.split("\n")[3].split("/")[split.length - 1].split(":")[0];
 //      var line = stack.split("\n")[3].split(":")[3];
 
-      var split = stack.split("\n")[5].split("/");
-      var file = stack.split("\n")[5].split("/")[split.length - 1].split(":")[0];
-      var line = stack.split("\n")[5].split(":")[3];
+      var split = stack.split("\n")[3].split("/");
+      var file = stack.split("\n")[3].split("/")[split.length - 1].split(":")[0];
+      var line = stack.split("\n")[3].split(":")[3];
     //  var file = stack.split("\n")[2].split("/")[4].split("?")[0]
     //  var line = stack.split("\n")[2].split(":")[5];
     //  console.log('file: ' + file);
