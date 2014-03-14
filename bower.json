@@ -1,0 +1,19 @@
+{
+  "name": "logger",
+  "main": "logger.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/koichidino/logger",
+  "description": "my logger",
+  "authors": [
+    "kayl"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
