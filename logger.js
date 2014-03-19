@@ -31,7 +31,7 @@ define(
    *   Logger.info('hello');
    *   Logger.warn('world);
    *
-   *   Logger.setLevel(icamera.log.Levels.DEBUG);
+   *   Logger.setLevel(Levels.DEBUG);
    */
   var Logger = function() {
     //this.alertFallback = true; ??
@@ -150,6 +150,9 @@ define(
   }
 
 
-  return Logger;
+  return {
+    logger: Logger,
+    level: Levels
+  }
 });
 
