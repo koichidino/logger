@@ -82,7 +82,10 @@ define(
         else
           output = msg;
 
-        console.log('%c' + output + ' - %c' + getLine() , 'color: #228b22; ' ,'color: #777777;');
+        if (typeof console.info === 'function')
+          console.info('%c' + output + ' - %c' + getLine() , 'color: #228b22; ' ,'color: #777777;');
+        else
+          console.log('%c' + output + ' - %c' + getLine() , 'color: #228b22; ' ,'color: #777777;');
       }
     },
     warn: function(msg) {
@@ -92,7 +95,7 @@ define(
           output = JSON.stringify(msg);
         else
           output = msg;
-        console.warn('%c' + output, "color:" + '#d2691e' + ";");
+        console.warn('%c' + output + ' - %c' + getLine() , "color:" + '#d2691e' + ";");
       }
     },
     error: function(msg) {
@@ -102,7 +105,7 @@ define(
           output = JSON.stringify(msg);
         else
           output = msg;
-        console.error('%c' + output, "color:" + 'red' + ";font-weight:bold;");
+        console.error('%c' + output + ' - %c' + getLine() , "color:" + 'red' + ";font-weight:bold;");
       }
     },
     fatal: function(msg) {
@@ -112,7 +115,7 @@ define(
           output = JSON.stringify(msg);
         else
           output = msg;
-        console.error('%c' + output, 'color: #baba55; background: #222; font-weight:bold;');
+        console.error('%c' + output + ' - %c' + getLine() , 'color: #baba55; background: #222; font-weight:bold;');
       }
     },
     setLevel: function(logLevel){
