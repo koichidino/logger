@@ -43,6 +43,9 @@ define(
   //return {
     log: function(msg) {
       if (this.level <= Levels.LOG) {
+        if (msg instanceof Error)
+          return console.log(msg);
+
         var output;
         if (typeof msg === 'object')
           output = JSON.stringify(msg);
@@ -53,6 +56,9 @@ define(
     },
     trace: function(msg) {
       if (this.level <= Levels.TRACE) {
+        if (msg instanceof Error)
+          return console.log(msg);
+
         var output;
         if (typeof msg === 'object')
           output = JSON.stringify(msg);
@@ -63,6 +69,9 @@ define(
     },
     debug: function(msg) {
       if (this.level <= Levels.DEBUG) {
+        if (msg instanceof Error)
+          return console.debug(msg);
+
         var output;
         if (typeof msg === 'object')
           output = JSON.stringify(msg);
@@ -76,6 +85,9 @@ define(
     },
     info: function(msg) {
       if (this.level <= Levels.INFO) {
+        if (msg instanceof Error)
+          return console.info(msg);
+
         var output;
         if (typeof msg === 'object')
           output = JSON.stringify(msg);
@@ -90,6 +102,9 @@ define(
     },
     warn: function(msg) {
       if (this.level <= Levels.WARN) {
+        if (msg instanceof Error)
+          return console.warn(msg);
+
         var output;
         if (typeof msg === 'object')
           output = JSON.stringify(msg);
@@ -100,6 +115,9 @@ define(
     },
     error: function(msg) {
       if (this.level <= Levels.ERROR) {
+        if (msg instanceof Error)
+          return console.error(msg);
+
         var output;
         if (typeof msg === 'object')
           output = JSON.stringify(msg);
